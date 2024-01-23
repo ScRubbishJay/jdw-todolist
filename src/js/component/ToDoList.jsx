@@ -3,23 +3,23 @@ import React, { useState } from "react";
 const ToDoList = () => {
     // establish state variables
     const [inputValue, setInputValue] = useState('');
-    const [items, setItems] = useState([]);
+    const [feature, setFeature] = useState([]);
 
     // helper functions
     const addItem = () => {
-        const newItem = {
+        const newFeature = {
             id: Math.floor(Math.random() * 1000),
             value: inputValue
         };
 
         
-        setItems(prevItems => [...prevItems, newItem]);
+        setFeature(prevFeature => [...prevFeature, newFeature]);
         setInputValue("");
     };
 
     const deleteItem= (id)=>{
-        const newArray= items.filter(items => items.id !== id);
-        setItems(newArray);
+        const newArray= feature.filter(feature => feature.id !== id);
+        setFeature(newArray);
     ;
     }
     return (
@@ -36,8 +36,8 @@ const ToDoList = () => {
             </div>
             <div>
                 <ul>
-                    {items.map(item => (
-                        <li key={item.id}>{item.value} <button onClick={()=>deleteItem()}>x</button></li>
+                    {feature.map(feature => (
+                        <li key={feature.id}>{feature.value} <button onClick={()=>deleteItem(feature.id)}>x</button></li>
                     ))}
                 </ul>
             </div>
