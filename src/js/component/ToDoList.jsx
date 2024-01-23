@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import './ToDoList.css';
+ 
 const ToDoList = () => {
     // establish state variables
     const [inputValue, setInputValue] = useState('');
@@ -22,8 +23,9 @@ const ToDoList = () => {
         setFeature(newArray);
     ;
     }
+
     return (
-        <div>
+        <div className="toDoList">
             <div>
                 <h1>To Do List</h1>
                 <input
@@ -40,6 +42,7 @@ const ToDoList = () => {
                         <li key={feature.id}>{feature.value} <button onClick={()=>deleteItem(feature.id)}>x</button></li>
                     ))}
                 </ul>
+                <p> Only <i>{feature.length}</i> more to go!</p>
             </div>
         </div>
     );

@@ -1,0 +1,13 @@
+.toDoList {
+    width: 50%;
+    margin: 0 auto;
+    background-color: olive;
+    color: white;
+    border-radius: 5px;
+}
+
+body {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/027/473/713/large_2x/coffee-shop-with-large-windows-looking-out-into-the-groove-lofi-world-photo.jpg);
+    background-size: cover;  /* Cover the entire viewport */
+ 
+}
